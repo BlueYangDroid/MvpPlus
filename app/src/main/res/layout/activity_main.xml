@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+    <Button
+        android:id="@+id/btn_backforetask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back Fore Task" />
+
+    <Button
+        android:id="@+id/btn_backtask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back Task" />
+
+    <Button
+        android:id="@+id/btn_async_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Async Image Task" />
+
+    <ImageView
+        android:id="@+id/img_glide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>
