@@ -7,6 +7,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
 import com.example.blue.myapplication.R;
+import com.example.blue.myapplication.widget.Singlton;
 
 /**
  * Created by Anthony on 2016/3/3.
@@ -14,6 +15,10 @@ import com.example.blue.myapplication.R;
  * use this class to load image,single instance
  */
 public class LoaderConfig {
+
+    public static final int STRATEGY_GLIDE = 0;
+    public static final int STRATEGY_PICASSO = 1;
+    public static final int STRATEGY_CUSTOM = 2;
 
     public static final int TRANS_NORMAL = 0;
     public static final int TRANS_CIRCLE = 1;
@@ -48,8 +53,21 @@ public class LoaderConfig {
 //        return mInstance;
 //    }
 
-    public static void setLoadImgStrategy(BaseImageLoaderStrategy strategy) {
-        mStrategy = strategy;
+    public static void setLoadImgStrategy(int strategy) {
+        switch (strategy) {
+            case STRATEGY_GLIDE:
+                mStrategy = Singlton.getInstance(GlideImageLoaderStrategy.class);
+                break;
+            case STRATEGY_PICASSO:
+                mStrategy = Singlton.getInstance(PicassoImageLoaderStrategy.class);
+                break;
+            case STRATEGY_CUSTOM:
+                mStrategy = Singlton.getInstance(CustomImageLoaderStrategy.class);
+                break;
+            default:
+                mStrategy = Singlton.getInstance(GlideImageLoaderStrategy.class);
+                break;
+        }
     }
 
     /**
