@@ -9,6 +9,7 @@ import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.DrawableTypeRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.model.stream.BaseGlideUrlLoader;
 import com.example.blue.myapplication.widget.imageloader.transform.GlideCircleTransform;
 import com.example.blue.myapplication.widget.imageloader.transform.GlideRoundTransform;
 import com.example.blue.myapplication.widget.thread.BackTask;

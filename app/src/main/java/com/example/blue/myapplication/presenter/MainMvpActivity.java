@@ -22,6 +22,7 @@ import com.example.blue.myapplication.widget.imageloader.ImageLoader;
 import com.example.blue.myapplication.widget.imageloader.LoaderConfig;
 import com.example.blue.myapplication.widget.thread.BackForeTask;
 import com.example.blue.myapplication.widget.thread.BackTask;
+import com.example.blue.myapplication.widget.thread.CommonQueryHandler;
 
 import java.lang.ref.WeakReference;
 
@@ -66,6 +67,7 @@ public class MainMvpActivity extends BaseMvpActivity<MainView, MainLogic>
 //                mainHandler.post(new MyBackTask());
                 // 懒加载3.2：-》work Thread
                 mainHandler.obtainMessage(MSG_BACK_TASK).sendToTarget();
+
 
             }
         });
